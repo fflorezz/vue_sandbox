@@ -16,16 +16,14 @@ export default {
   data: () => ({}),
   methods: {
     increment() {
-      this.dispatchIncrement()
+      this.dispatchIncrement(10)
     },
     ...mapActions({
       dispatchIncrement: 'increment',
     }),
   },
   computed: {
-    ...mapState({
-      count: 'count',
-    }),
+    ...mapState(['count']),
   },
 }
 </script>
